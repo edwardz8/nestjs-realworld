@@ -17,9 +17,11 @@ node_modules
 #config files
 ormconfig.json
 src/config.ts
+.example
 
 # code testing coverage
 coverage
 
 
 dist/*
+

@@ -1,9 +1,9 @@
 {
-  "type": "mysql",
+  "type": "postgres",
   "host": "localhost",
-  "port": 3306,
-  "username": "your-mysql-username",
-  "password": "your-mysql-password",
+  "port": 5432,
+  "username": "edwardz_8",
+  "password": "Baseball29",
   "database": "nestjsrealworld",
   "entities": ["src/**/**.entity{.ts,.js}"],
   "synchronize": true

@@ -1,9 +1,6 @@
-# ![Node/Express/Mongoose Example App](project-logo.png)
-
-[![Build Status](https://travis-ci.org/anishkny/node-express-realworld-example-app.svg?branch=master)](https://travis-ci.org/anishkny/node-express-realworld-example-app)
+# NestJS TYPEORM POSTGRES build for FORUM APPLICATION 
 
 > ### NestJS codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld-example-apps) API spec.
-
 
 ----------
 
@@ -33,9 +30,9 @@ Copy config file and set JsonWebToken secret key
 
 The codebase contains examples of two different database abstractions, namely [TypeORM](http://typeorm.io/) and [Prisma](https://www.prisma.io/). 
     
-The branch `master` implements TypeORM with a mySQL database.
+The branch `master` implements TypeORM with a postgres database.
 
-The branch `prisma` implements Prisma with a mySQL database.
+The branch `prisma` implements Prisma with a postgres database.
 
 ----------
 
@@ -43,27 +40,27 @@ The branch `prisma` implements Prisma with a mySQL database.
 
 ----------
 
-Create a new mysql database with the name `nestjsrealworld`\
+Create a new postgres database with the name `nestjsrealworld`\
 (or the name you specified in the ormconfig.json)
 
 Copy TypeORM config example file for database settings
 
     cp ormconfig.json.example
     
-Set mysql database settings in ormconfig.json
+Set postgres database settings in ormconfig.json
 
     {
-      "type": "mysql",
+      "type": "postgres",
       "host": "localhost",
       "port": 3306,
-      "username": "your-mysql-username",
-      "password": "your-mysql-password",
+      "username": "your-postgres-username",
+      "password": "your-postgres-password",
       "database": "nestjsrealworld",
       "entities": ["src/**/**.entity{.ts,.js}"],
       "synchronize": true
     }
     
-Start local mysql server and create new database 'nestjsrealworld'
+Start local postgres server and create new database 'nestjsrealworld'
 
 On application start, tables for all entities will be created.
 
@@ -75,15 +72,15 @@ On application start, tables for all entities will be created.
 
 To run the example with Prisma checkout branch `prisma`, remove the node_modules and run `npm install`
 
-Create a new mysql database with the name `nestjsrealworld-prisma` (or the name you specified in `prisma/.env`)
+Create a new postgres database with the name `nestjsrealworld-prisma` (or the name you specified in `prisma/.env`)
 
 Copy prisma config example file for database settings
 
     cp prisma/.env.example prisma/.env
 
-Set mysql database settings in prisma/.env
+Set postgres database settings in prisma/.env
 
-    DATABASE_URL="mysql://USER:PASSWORD@HOST:PORT/DATABASE"
+    DATABASE_URL="postgres://USER:PASSWORD@HOST:PORT/DATABASE"
 
 To create all tables in the new database make the database migration from the prisma schema defined in prisma/schema.prisma
 
@@ -96,7 +93,7 @@ Now generate the prisma client from the migrated database with the following com
 
 The database tables are now set up and the prisma client is generated. For more information see the docs:
 
-- https://www.prisma.io/docs/getting-started/setup-prisma/add-to-existing-project-typescript-mysql
+- https://www.prisma.io/docs/getting-started/setup-prisma/add-to-existing-project-typescript-postgres
 
 
 ----------
